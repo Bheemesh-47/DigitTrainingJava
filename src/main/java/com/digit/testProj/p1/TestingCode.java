@@ -6,8 +6,7 @@ public class TestingCode {
 		// TODO Auto-generated method stub
 		System.out.println("Hi From Sachin");
 		System.out.println("Hi From Sachin");
-		System.out.println("Hi From Sachin");
-		System.out.println("Hi From Sachin");
+
 	}
 
 }
