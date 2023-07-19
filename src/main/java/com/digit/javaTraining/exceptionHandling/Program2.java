@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class Program2 {
 	public static void main(String[] args) {
-		try {
-			Scanner sc = new Scanner(System.in);
+		try(Scanner sc = new Scanner(System.in)) {
 
 			System.out.println("Division Operation");
 			System.out.println("Enter the numerator : ");
@@ -35,17 +34,11 @@ public class Program2 {
 		catch(ArithmeticException e1) {
 			System.out.println("ArithmeticException");
 		}
-		catch(NegativeArraySizeException e2) {
-			System.out.println("NegativeArraySizeException");
+		catch(NegativeArraySizeException|ArrayIndexOutOfBoundsException e2) {
+			System.out.println("Arrayrelated Exception");
 		}
-		catch(ArrayIndexOutOfBoundsException e3) {
-			System.out.println("ArrayIndexOutOfBoundsException");
-		}
-		catch (InputMismatchException e4) {
-			System.out.println("InputMismatchException");
-		}
-		catch(NullPointerException e5) {
-			System.out.println("NullPointerException");
+		catch (InputMismatchException|NullPointerException e4) {
+			System.out.println("Input Related Exception");
 		}
 		catch (Exception e) {
 			System.out.println("Exception handled by generic catch");
