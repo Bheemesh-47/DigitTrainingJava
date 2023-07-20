@@ -51,6 +51,7 @@ class Warrior1 extends Thread {
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
+			System.out.println();
 		}
 	}
 }
