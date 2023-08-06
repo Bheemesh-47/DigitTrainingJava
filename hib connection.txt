@@ -1,0 +1,12 @@
+//Collect data from hibernate.cfg.xml and gets ready for configuration
+Configuration configuration = new Configuration().configure("hibernate.cfg.xml"); //connects to cfg
+		
+//Prepare a service registry for  Hibernate by making use of the properties acquired from Hibernate.cfg.xml
+ServiceRegistryBuilder builder = new ServiceRegistryBuilder().applySettings(configuration.getProperties());
+		
+//Using service registry we will activate the session factory which contain multiple sessions
+SessionFactory sessionFactory = configuration.buildSessionFactory(builder.buildServiceRegistry());       		   
+//A session is enabled by the session factory for the Hibernate opertaions
+session =sessionFactory.openSession();	
+		
+System.out.println("Connected to database");
